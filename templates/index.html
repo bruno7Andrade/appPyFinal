@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina inicial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0B243B;
+
+}
+
+header {
+  background-color: #2E2E2E;
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  background-image: url(https://sureoptimize.com/wp-content/uploads/digital-marketing-data-science.png);
+  bgproperties: fixed;
+  background-size: cover;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #0B3861;width:250px;height:80px;}
+</style>
+</head>
+<body>
+<header>
+    <h2> Cadastro de clientes</h2>
+</header>
+    <hr>
+    <a href="{{ url_for('cadastrar')}}" style="color:white"><button class="button button1"><b> Cadastrar Cliente</button></b></a>
+    <br>
+    <a href="{{ url_for('lista')}}" style="color:white"><button class="button button1"><b> Lista de Clientes</button></b></a>
+</body>
+</html>

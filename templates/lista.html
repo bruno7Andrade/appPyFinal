@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de clientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0B243B;
+
+}
+
+header {
+  background-color: #2E2E2E;
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  background-image: url(https://sureoptimize.com/wp-content/uploads/digital-marketing-data-science.png);
+  bgproperties: fixed;
+  background-size: cover;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  position: fixed;
+  bottom:0;
+  left:0;
+}
+
+</style>
+</head>
+<body>
+<header>
+    <h2>Lista de clientes</h2>
+</header>
+    <hr>
+    <table border="4">
+        <tr>
+            <td style="text-align:left;color:white;background-color:#0B3861;text-align:center">ID</td>
+            <td style="text-align:left;color:white;background-color:#0B3861;text-align:center">Nome</td>
+            <td style="text-align:left;color:white;background-color:#0B3861;text-align:center">Telefone</td>
+            <td style="text-align:left;color:white;background-color:#0B3861;text-align:center">CPF</td>
+            <td style="text-align:left;color:white;background-color:#0B3861;text-align:center">E-mail</td>
+            <td style="text-align:left;color:white;background-color:#0B3861;text-align:center">Excluir</td>
+            <td style="text-align:left;color:white;background-color:#0B3861;text-align:center">Atualizar</td>
+        </tr>
+        {% for pessoa in pessoas%}
+        <tr>
+            <td style ="background-color:white;text-align:center">{{ pessoa.id}}</td>
+            <td style ="background-color:white;text-align:center">{{ pessoa.nome}}</td>
+            <td style ="background-color:white;text-align:center">{{ pessoa.telefone}}</td>
+            <td style ="background-color:white;text-align:center">{{ pessoa.cpf}}</td>
+            <td style ="background-color:white;text-align:center">{{ pessoa.email}}</td>
+            <td style ="background-color:white;text-align:center"><a href="/excluir/{{ pessoa.id }}">X</a> </td>
+            <td style ="background-color:white;text-align:center"><a href="/atualizar/{{ pessoa.id }}">Atualizar</a> </td>
+        </tr>
+        {% endfor%}
+    </table>
+    <a href="/index"><footer>Voltar</footer></a>
+</body>
+</html>
